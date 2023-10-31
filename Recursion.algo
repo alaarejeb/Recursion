@@ -1,0 +1,31 @@
+FUNCTION palindrome (ch:STRING , i) : BOOLEAN
+VAR
+  i,j :INTEGER;
+BEGIN
+   
+    j:= ch.length -1-i
+   
+   IF (ch<[i] >= ch [j] ) then 
+     RETURN (true)
+   ELSE -IF (ch<[i] == ch [j] ) 
+   palindrome(ch , i+1)
+   END-IF
+   ELSE-IF (ch<[i] <> ch [j] )
+   RETURN(false)
+   END-IF
+   END
+
+ALGORITHM palindrome
+    VAR
+    i:INTEGER:=0
+    ch:STRING
+BEGIN
+    Read (ch) ;
+    palaind:=(palindrome(ch,i))
+    IF ( palaind==true) THEN
+        write("pallindrome")
+        ELSE
+        write("n'est pas une pallindrome")
+    END_IF
+
+END
